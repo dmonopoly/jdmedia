@@ -21,4 +21,4 @@
 <p> <!--Actual video-->  
   <%=simple_format @movie.embed_code %>
 </p>
-<% if logged_in? %><%= link_to 'Edit', edit_movie_path(@movie) %><% end %>
+<% if current_user %><%= link_to 'Edit', edit_movie_path(@movie) %><% end %>

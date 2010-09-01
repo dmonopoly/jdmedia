@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
 			t.string :persistence_token, :null => false # stored in cookies and sessions to persist user
 			
 			t.string :single_access_token, :null => false # so you can enter a token in the URL to get temporary access
-			t.string :perishable_token, null => false # for authenticating users to reset passwords, confirm accounts, etc.
+			t.string :perishable_token, :null => false # for authenticating users to reset passwords, confirm accounts, etc.
 			
 			# magic columns - optional
       t.integer :login_count, :null => false, :default => 0

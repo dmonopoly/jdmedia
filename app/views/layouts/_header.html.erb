@@ -1,11 +1,11 @@
-  <h1 style="text-align:center"><%= link_to(image_tag("jdmedia_black.jpg"), root_url) %></h1>
-  
-  <% if logged_in? %>
-  Welcome, <%= current_user.login.capitalize %> | <%= link_to 'List users', users_url %> | <%= link_to 'New movie', new_movie_path %>
-  <% end %>
-  
-  <div class="navigation <% if logged_in? %>loggedIn<% end %> ">
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'Movies', movies_path %></li>
-    <li><%= link_to 'Course Material', :controller => 'static', :action => 'course_material' %></li>
-  </div>
+<h1 style="text-align:center"><%= link_to(image_tag("jdmedia_black.jpg"), root_url) %></h1>
+
+<% if current_user %>
+Welcome, <%= current_user.login.capitalize %> | <%= link_to 'List users', users_path %> | <%= link_to 'New movie', new_movie_path %>
+<% end %>
+
+<div class="navigation <% if current_user %>loggedIn<% end %> ">
+	<li><%= link_to 'Home', root_path %></li>
+	<li><%= link_to 'Movies', movies_path %></li>
+	<li><%= link_to 'Course Material', :controller => "static", :action => "course_material" %></li>
+</div>

@@ -17,7 +17,14 @@
 
 <div class="container">
   <%= render :partial => 'layouts/header' %>  
-  
+  <div id="flashes">
+		<% names = [:notice, :error, :warning, :message, :success] %>
+		<% for name in names %>
+			<% if flash[name] %>
+				<%= "<div id=\"#{name}\" class=\"#{name}\">#{flash[name]}</div>" %>
+			<% end %>
+		<% end %>
+	</div>
   <%= yield %>
   
   <%= render :partial => 'layouts/footer' %>

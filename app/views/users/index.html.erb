@@ -1,0 +1,16 @@
+<!--users/index-->
+<table>
+<tr>
+  <th>Login</th>
+  <th>Email</th>
+</tr>
+<% for user in @users %>
+<tr>
+  <td><%= user.login %></td>
+  <td><%= link_to 'Edit', edit_user_path(user) %></td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to 'Sign up a new user', signup_url %><br/>
+(Note: The prospective user should be by your side ready to type in his/her information.  You will be logged out when this person's account is created.)
