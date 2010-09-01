@@ -1,7 +1,7 @@
 <h1 style="text-align:center"><%= link_to(image_tag("jdmedia_black.jpg"), root_url) %></h1>
 
 <% if current_user %>
-Welcome, <%= current_user.login.capitalize %> | <%= link_to 'List users', users_path %> | <%= link_to 'New movie', new_movie_path %>
+Welcome, <%= current_user.login %> | <%= link_to 'List users', users_path %> | <%= link_to 'New movie', new_movie_path %>
 <% end %>
 
 <div class="navigation <% if current_user %>loggedIn<% end %> ">

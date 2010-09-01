@@ -1,9 +1,6 @@
 <!--users/edit-->
-<h1>Edit My Account</h1>
+<h2>Edit My Account</h2>
+<p>You can change your login and password here.</p>
+<%= render :partial=>"form", :locals => { :button_name => "Update", :pw_label => "Change password" } %>
 
-<%= form_for @user do |f| %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "Update" %>
-<% end %>
-
-<br /><%= link_to "<< Back", users_path %>
+<%= link_to "<< Back", users_path %> | <%= link_to "Delete my account", current_user, :method=>:delete, :confirm=>"Are you sure you want to delete your account?" %>

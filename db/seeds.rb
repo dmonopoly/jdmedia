@@ -6,3 +6,12 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 User.create(:login=>'dakota', :password=>'northandsouth', :password_confirmation=>'northandsouth')
+
+Category.create(:name=>'Animation')
+Category.create(:name=>'Film')
+
+Genre.create(:name=>'Action')
+Genre.create(:name=>'Comedy')
+Genre.create(:name=>'Drama')
+Genre.create(:name=>'Music Video')
+Genre.create(:name=>'Other')

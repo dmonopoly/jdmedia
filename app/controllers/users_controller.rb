@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "Account registered!"
+			flash[:notice] = "New user successfully created"
       redirect_back_or_default '/'
     else
       render :action => :new
@@ -26,8 +26,7 @@ class UsersController < ApplicationController
   def update
     @user = @current_user # makes our views "cleaner" and more consistent
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Account updated!"
-      redirect_to '/'
+      redirect_to '/', :notice => "User updated"
     else
       render :action => :edit
     end
@@ -36,8 +35,7 @@ class UsersController < ApplicationController
 	def destroy
 		name = @current_user.login
 		@current_user.destroy
-		flash[:notice] = "The user '#{name}' has been deleted."
-		redirect_to '/'
+		redirect_to '/', :notice => "The user '#{name}' has been deleted."
 	end
 	
 end

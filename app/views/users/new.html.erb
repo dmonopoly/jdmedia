@@ -1,7 +1,6 @@
 <!--users/new-->
-<h1>Register</h1>
+<h2>Register</h2>
 
-<%= form_for @user do |f| %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %>
-<% end %>
+<%= render :partial=>"form", :locals => { :button_name => "Create", :pw_label => "Password" } %>
+
+<%= link_to "<< Back", users_path %>

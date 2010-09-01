@@ -1,9 +1,17 @@
-<%= form.error_messages %>
-<%= form.label :login %><br />
-<%= form.text_field :login %><br />
-<br />
-<%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
-<%= form.password_field :password %><br />
-<br />
-<%= form.label :password_confirmation %><br />
-<%= form.password_field :password_confirmation %><br />
+<!--users/_form; variables used = pw_label, button_name-->
+<%= form_for @user do |f| %>
+	<%= f.error_messages %>
+	<p>
+		<%= f.label :login %><br/>
+		<%= f.text_field :login %>
+	</p>
+	<p>
+		<%= f.label :password, pw_label %><br/>
+		<%= f.password_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation %><br/>
+		<%= f.password_field :password_confirmation %>
+	</p>
+  <%= f.submit button_name %>
+<% end %>

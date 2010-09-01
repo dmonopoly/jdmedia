@@ -5,10 +5,9 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>JD Media</title>
-  <%= stylesheet_link_tag 'scaffold' %>
-  <%= stylesheet_link_tag 'my_styles' %>
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
-  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>  
+  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+	<%= stylesheet_link_tag 'application', 'mystyles' %>
   <!--[if IE]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
 	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -21,7 +20,7 @@
 		<% names = [:notice, :error, :warning, :message, :success] %>
 		<% for name in names %>
 			<% if flash[name] %>
-				<%= "<div id=\"#{name}\" class=\"#{name}\">#{flash[name]}</div>" %>
+				<div id="<%= name %>" class="<%= name %>"><%= flash[name] %></div>
 			<% end %>
 		<% end %>
 	</div>

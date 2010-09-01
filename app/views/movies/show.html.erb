@@ -19,6 +19,6 @@
 </p>
 
 <p> <!--Actual video-->  
-  <%=simple_format @movie.embed_code %>
+  <%=raw @movie.embed_code %>
 </p>
 <% if current_user %><%= link_to 'Edit', edit_movie_path(@movie) %><% end %>
