@@ -1,0 +1,6 @@
+<h1>Editing movie</h1>
+
+<%= render :partial => 'form', :locals => { :button_label => "Update", :movie => @movie } %>
+
+<%= link_to 'Show', @movie %> |
+<%= link_to 'Delete', @movie, :confirm => 'Are you sure?', :method => :delete %>

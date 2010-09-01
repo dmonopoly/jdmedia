@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>JD Media</title>
+  <title>JD Media | <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>
   <%= stylesheet_link_tag 'my_styles' %>
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
@@ -16,11 +16,14 @@
 <body style="background:black">
 
 <div class="container">
-  <%= render :partial => 'layouts/header' %>  
+  <%= render :partial => 'layouts/header' %>
+  <%= render :partial => 'layouts/sidebar' %>  
   
-  <%= yield %>
+  <div class="span-16 last">
+    <%= yield %>    
+    <%= render :partial => 'layouts/footer' %>
+  </div>
   
-  <%= render :partial => 'layouts/footer' %>
 </div>
 
 </body>

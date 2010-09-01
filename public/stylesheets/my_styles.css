@@ -1,0 +1,84 @@
+/* GENERAL STYLES */
+.container {
+	background: black;
+	color: red;
+}
+
+#footer {
+	text-align:center;
+	padding:2px;
+	margin: 0px;	
+}
+
+/* HEADER STYLES */
+.navigation {
+  background: #AA0000;
+  height: 40px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 1.6em; /* using em is preferred to using px since px does not work with IE */
+  line-height: 2.0em;
+  border: 7px ridge #7E2217; /* indian red4*/
+}
+.navigation li {
+  display: inline;
+}
+.navigation a:link {
+	text-decoration: none;	
+}
+.navigation a:visited {
+	text-decoration: none;
+}
+.navigation a:hover {
+	background: inherit;
+}
+.navigation a:active {
+	
+}
+.loggedIn {
+	border: 7px ridge gray;
+}
+/* SIDEBAR STYLES */
+#sidebar {
+	border: .3125em solid #740027;
+}
+.sidebar_elem {
+	color: black;
+	background: #800000; /* burgundy */
+	line-height: 2.1em;
+	margin: 0 auto; /* Useful code!!! = anti-<br/> */
+	font-size: 1.3em; /* using em is preferred to using px since px does not work with IE */
+}
+.sidebar_elem:hover {
+	background: #741530;
+}
+.sidebar_elem a:link { /* unvisited link */
+	text-decoration: none;
+	color: black;
+}
+.sidebar_elem a:visited { /* visited link */
+	text-decoration: none;
+	color: black;
+}
+.sidebar_elem a:hover { /* mouse over link */	
+	background: #741530;
+}
+.sidebar_elem a:active { /* active link (i.e. when you are clicking) */	
+}
+.selected {
+	background: red;
+}
+/* GENERAL ANCHOR STYLES */
+a:link { /* unvisited linK */
+	text-decoration: underline;
+	color: red;
+}
+a:visited { /* visited link */
+	text-decoration: underline;
+	color: red;
+}
+a:hover { /* mouse over link */
+	background: orange;
+}
+a:active { /* active link (i.e. when you are clicking) */
+}

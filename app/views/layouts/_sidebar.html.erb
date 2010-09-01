@@ -1,0 +1,12 @@
+<div id="sidebar" class="span-4">
+  <p class="sidebar_elem <% if current_page?(movies_path) %> selected<% end %>"><%= link_to 'All', movies_path %></p>
+  Categories---  
+  <p class="sidebar_elem <% if current_page?(:action=>'animations') %> selected<% end %>"><%= link_to 'Animation', :controller => 'categories', :action => 'animations' %></p>
+  <p class="sidebar_elem <% if current_page?(:action=>'films') %> selected<% end %>"><%= link_to 'Film', :controller => 'categories', :action => 'films' %></p>
+  Genres---
+  <p class="sidebar_elem <% if current_page?(:action=>'action_movies') %> selected<% end %>"><%= link_to 'Action', :controller => 'genres', :action => 'action_movies' %></p>
+  <p class="sidebar_elem <% if current_page?(:action=>'comedies') %> selected<% end %>"><%= link_to 'Comedy', :controller => 'genres', :action => 'comedies' %></p>
+  <p class="sidebar_elem <% if current_page?(:action=>'dramas') %> selected<% end %>"><%= link_to 'Drama', :controller => 'genres', :action => 'dramas' %></p>
+  <p class="sidebar_elem <% if current_page?(:action=>'music_videos') %> selected<% end %>"><%= link_to 'Music Video', :controller => 'genres', :action => 'music_videos' %></p>
+  <p class="sidebar_elem <% if current_page?(:action=>'other') %> selected<% end %>"><%= link_to 'Other', :controller => 'genres', :action => 'other' %></p>
+</div>

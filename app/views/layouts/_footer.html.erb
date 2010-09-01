@@ -1,0 +1,8 @@
+<div id="footer">
+  lkrukows@jd.cnyric.org | jdmedia | 
+  <% if logged_in? %>
+    <%= link_to 'Sign out', logout_url%>
+  <% else %>
+    <%= link_to 'Sign in', login_url %>
+  <% end %>
+</div>

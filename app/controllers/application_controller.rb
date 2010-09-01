@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  helper :all # include all helpers, all the time
+	protect_from_forgery
 end

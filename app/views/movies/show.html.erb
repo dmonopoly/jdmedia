@@ -1,0 +1,24 @@
+<p>
+  <b>Title:</b>
+  <%=h @movie.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @movie.author %>
+</p>
+
+<p>
+  <b>Category:</b>
+    <%=h @movie.category.name %>
+</p>
+
+<p>
+  <b>Genre:</b>
+    <%=h @movie.genre.name %>
+</p>
+
+<p> <!--Actual video-->  
+  <%=simple_format @movie.embed_code %>
+</p>
+<% if logged_in? %><%= link_to 'Edit', edit_movie_path(@movie) %><% end %>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>JD Media | <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'my_styles' %>
+  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
+  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>  
+  <!--[if IE]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
+	<%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body style="background:black">
+
+<div class="container">
+  <%= render :partial => 'layouts/header' %>
+  <%= render :partial => 'layouts/sidebar' %>  
+  
+  <div class="span-16 last">    
+    <%= controller.action_name.capitalize.gsub( '_',' ' ) %> - 
+      <% if @category.nil? %>
+        All
+      <% else %>
+        <%= @category.capitalize %>
+      <% end %>
+    <br/>
+    <%= link_to 'All', :controller => :genres, :action => controller.action_name %>
+    <%= link_to 'Animation', :controller => :genres, :action => controller.action_name, :c => 'Animation' %>
+    <%= link_to 'Film', :controller => :genres, :action => controller.action_name, :c => 'Film' %>    
+    
+    <br/>
+    <%= yield %>
+    
+    <%= render :partial => 'layouts/footer' %>
+  
+  </div>
+  
+</div>
+
+</body>
+</html>

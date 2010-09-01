@@ -1,0 +1,6 @@
+<% movies.each do |movie| %>
+  <ul>
+    <!--ID specified here for test only....-->
+    <li id="theMovie"><%= link_to "#{h movie.title}", movie %></li>
+  </ul>
+<% end %>
